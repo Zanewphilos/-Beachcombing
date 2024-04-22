@@ -1,0 +1,12 @@
+html,
+body,
+#__next {
+  height: 100%;
+}
+
+
+
+.content {
+  height: calc(100vh - 70px); /* 70px 是底部导航栏的高度 */
+  overflow-y: auto; /* 如果内容过长，允许滚动 */
+}

@@ -1,0 +1,10 @@
+.weather-container {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .weather-container {
+    max-width: 100%; /* 或者你可以使用 100vw 保证宽度总是满屏宽 */
+    margin: auto;
+  }
+  

@@ -1,0 +1,84 @@
+.modalForm {
+    background: white;
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 400px;
+    margin: auto;
+    transform: translateY(-50px);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .modalForm.active {
+    transform: translateY(0);
+  }
+  
+  .modalForm input {
+    width: calc(100% - 40px); /* 宽度为容器宽度减去左右padding */
+  margin-bottom: 20px; /* 输入框之间的间隔调整为20px */
+  font-size: 16px; /* 字体大小调整为16px */
+  padding: 9px; /* 适当的填充保持文本居中 */
+  border: 1px solid #ccc; /* 添加边框 */
+  border-radius: 5px; /* 添加圆角 */
+  outline: none; /* 移除焦点时的高光 */
+  }
+  
+  .modalForm button {
+  width: calc(100% - 25px); /* 宽度为容器宽度减去左右padding */
+  padding: 9px; /* 按钮填充 */
+  margin-bottom: 20px; /* 按钮下方的间隔调整为20px */
+  border: 1px solid #ccc; 
+  border-radius: 5px; /* 设置按钮圆角 */
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 1.25em; /* 增加按钮文本的字号 */
+  }
+  
+
+  .errorMessage {
+    min-height: 40px; /* 即使没有错误信息也保留空间 */
+    color: #ff3860;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    transition: visibility 0.3s, opacity 0.3s ease-in-out;
+    opacity: 0; /* 默认透明 */
+  }
+  
+  .errorMessage.active {
+    opacity: 1; /* 当有错误信息时变为不透明 */
+    visibility: visible; /* 使其可见 */
+  }
+  
+  .modalForm {
+    position: relative;
+    /* ...other styles... */
+  }
+  
+
+  
+
+  .errorMessage {
+    color: #ff3860; 
+    
+  }
+  /* 动画效果 */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .modalFormEntering {
+    animation: fadeIn 0.3s ease-in-out forwards;
+  }

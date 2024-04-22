@@ -1,0 +1,24 @@
+.mapContainerStyle {
+    position: relative; /* 添加定位以便于控件定位 */
+    width: 100%;       
+    height: calc(100vh - 50px); /* 假设控件和按钮高度为50px */
+    overflow: hidden;
+}
+
+/* 地图样式保持不变 */
+.mapStyle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* 调整标记样式 */
+.marker {
+    position: absolute;
+    visibility: hidden;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}

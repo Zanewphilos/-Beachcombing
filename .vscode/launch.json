@@ -1,0 +1,29 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Chrome against localhost for Next.js",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        // Next.js 使用的 Webpack 配置可能使源文件的路径不同。以下路径是假设的，可能需要根据你的项目具体情况进行调整。
+        "webpack://_N_E/*": "${webRoot}/*",
+        "webpack:///./*": "${webRoot}/*",
+        "webpack:///./src/*": "${webRoot}/src/*",
+        // 如果使用了别名路径，也可以在这里进行映射，例如:
+        // "webpack://your-alias/*": "${webRoot}/path/to/your/alias/*"
+      },
+      "skipFiles": [
+        // 忽略 Node.js 内部文件和 webpack 引导文件以便调试时更加集中于业务代码。
+        "<node_internals>/**",
+        "webpack://_N_E/webpack/bootstrap"
+      ]
+    }
+  ]
+}
